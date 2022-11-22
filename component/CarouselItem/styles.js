@@ -4,14 +4,14 @@ const { width: screenWidth } = Dimensions.get('window');
 const styles = StyleSheet.create({
   title: {
     fontSize: 24,
-    // marginTop: -100,
     textAlign: "center"
   },
   description:{
     fontSize: 15,
     textAlign: "center",
     paddingHorizontal: 30,
-    paddingTop: 10
+    paddingTop: 10,
+    letterSpacing: 0.5
   },
   text: {
     marginLeft: -30,

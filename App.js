@@ -7,6 +7,7 @@ import {
   Text,
   useColorScheme,
   View,
+  Button,
 } from 'react-native';
 
 import {
@@ -19,6 +20,7 @@ import {
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Onboarding from './screens/Onboarding/index';
+import NewWallet from './screens/NewWallet';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,14 +31,13 @@ const App = () => {
         screenOptions={{
           // Turn off all navigation header. If need to shown please set on useEffect in every page needed.
           headerShown: false,
-          headerBackTitleVisible: false,
-          headerBackVisible: false,
           // Change all background color to WHITE. (Default: Gray)
-          contentStyle:{
-            backgroundColor:'#FFFFFF'
-          }
+          contentStyle: {
+            backgroundColor: '#FFFFFF',
+          },
         }}>
-        <Stack.Screen name="Onboarding" component={Onboarding} />
+        <Stack.Screen name="Onboarding" component={Onboarding}/>
+        <Stack.Screen name="CREATE NEW WALLET" component={NewWallet}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

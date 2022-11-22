@@ -1,11 +1,11 @@
-import { StyleSheet } from "react-native";
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   logoView: {
-    flexDirection: "row",
-    justifyContent: "center",
+    flexDirection: 'row',
+    justifyContent: 'center',
     height: 60,
-    alignItems: "center",
+    alignItems: 'center',
   },
   imageLogo: {
     width: 45,
@@ -13,40 +13,21 @@ const styles = StyleSheet.create({
   },
   logoText: {
     fontSize: 30,
-    fontWeight: "300"
+    fontWeight: '300',
   },
-  primaryButton: {
-    backgroundColor: "#550472",
-    alignItems:"center",
-    justifyContent: 'center',
-    paddingVertical: 12,
-    paddingHorizontal: 32,
-    borderRadius: 8,
+  dotActiveStyle: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+    backgroundColor: '#3b186e',
   },
-  secondaryButton: {
-    backgroundColor: "#ffffff",
-    alignItems:"center",
-    justifyContent: 'center',
-    paddingVertical: 12,
-    paddingHorizontal: 32,
-    borderRadius: 8,
-  },
-  container: {
-    padding: 20
-  },
-  fontWhite:{
-    color: "white"
-  },
-  fontBlack: {
-    color: "black"
-  },
-  fontWeight600: {
-    fontWeight: "600"
-  },
-  separator: {
-    marginVertical: 8,
-    borderBottomColor: '#737373',
-    borderBottomWidth: StyleSheet.hairlineWidth,
+  dotInactiveStyle: {
+    width: 10,
+    height: 10,
+    borderRadius: 100,
+    backgroundColor: '#ffffff',
+    borderWidth: 1,
+    borderColor: '#737373',
   },
 });
 

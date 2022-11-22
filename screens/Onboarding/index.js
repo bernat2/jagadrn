@@ -9,13 +9,15 @@ import {
 } from 'react-native';
 import Carousel, {Pagination} from 'react-native-snap-carousel';
 import CarouselItem from '../../component/CarouselItem/CarouselItem';
+// styles only use in this file only
 import styles from './style';
+// styles used can be called and reuse by other file
+import globalStyle from '../../styles/index';
 
 const Onboarding = ({navigation}) => {
   React.useEffect(() => {}, []);
 
-  const {width: screenWidth} = Dimensions.get('window');
-
+  // Data needed for carousel
   const data = [
     {
       image: require('../../images/onboarding/vector1.png'),
@@ -62,45 +64,45 @@ const Onboarding = ({navigation}) => {
           />
           <Text style={styles.logoText}>Garuda</Text>
         </View>
-        <View style={styles.separator}></View>
+        <View style={globalStyle.separator}></View>
       </View>
 
-      <View style={styles.container}>
+      <View style={globalStyle.container}>
         {/* Carousel Here */}
         <Carousel
           ref={carouselRef}
           {...settings}
           onSnapToItem={index => setIndex(index)}
         />
+
+        {/* If use pagination define here with the data */}
         <Pagination
           dotsLength={data.length}
           carouselRef={carouselRef}
           activeDotIndex={index}
-          containerStyle={{backgroundColor: 'white'}}
-          dotStyle={{
-            width: 10,
-            height: 10,
-            borderRadius: 5,
-            marginHorizontal: 8,
-            backgroundColor: 'black',
-          }}
+          dotStyle={
+            // Active dot style
+            styles.dotActiveStyle
+          }
           inactiveDotStyle={
-            {
-              // Define styles for inactive dots here
-            }
+            // Define styles for inactive dots here
+            styles.dotInactiveStyle
           }
           tappableDots={true}
+          inactiveDotOpacity={1}
+          inactiveDotScale={1}
+          animatedDuration={0}
         />
 
         {/* Button */}
         <View>
-          <TouchableOpacity style={styles.primaryButton}>
-            <Text style={[styles.fontWhite, styles.fontWeight600]}>
+          <TouchableOpacity style={globalStyle.primaryButton} onPress={() => navigation.navigate('CREATE NEW WALLET')}>
+            <Text style={[globalStyle.fontWhite, globalStyle.fontWeight600]}>
               CREATE NEW WALLET
             </Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.secondaryButton}>
-            <Text style={[styles.fontBlack, styles.fontWeight600]}>
+          <TouchableOpacity style={globalStyle.secondaryButton}>
+            <Text style={[globalStyle.fontBlack, globalStyle.fontWeight600]}>
               I ALREADY HAVE A WALLET
             </Text>
           </TouchableOpacity>
