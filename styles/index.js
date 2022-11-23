@@ -25,24 +25,16 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     borderRadius: 8,
   },
-  backButton: {
-    width: 30,
-    height: 30,
-    borderWidth: 1,
-    borderRadius: 50,
-    borderColor: "#f2f2f2",
-  },
   container: {
     padding: 20,
+    paddingBottom: 8
   },
-  header: {
-    flexDirection: "row",
-    alignItems: "center",
-  }, 
-  headerTitle: {
-    fontSize: 15,
-    paddingLeft: 50,
-    letterSpacing: 1.3
+  transparentBtnGray: {
+    borderWidth: 2,
+    borderColor: "#f2f2f2",
+    borderRadius: 15,
+    paddingHorizontal: 10,
+    paddingVertical: 15,
   },
   separator: {
     marginVertical: 8,
@@ -60,6 +52,9 @@ const styles = StyleSheet.create({
   },
   fontGray: {
     color: "#797D85"
+  },
+  fontDarkGray: {
+    color: "#737070"
   },
   fontRed: {
     color: "red"

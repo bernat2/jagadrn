@@ -28,28 +28,6 @@ const styles = StyleSheet.create({
     padding: 20,
     marginTop: 40
   },
-  passwordWrongForm: {
-    borderWidth: 2,
-    borderColor: "#ec5352",
-    backgroundColor: "#fef4cc",
-    borderRadius: 8,
-    flexDirection: 'row',
-    height: 40,
-    padding: 10,
-    marginVertical: 12,
-  },
-  inputForm: {
-    borderWidth: 2,
-    borderColor: "#f2f2f2",
-    borderRadius: 8,
-    flexDirection: 'row',
-    height: 40,
-    padding: 10,
-    marginVertical: 12,
-  },
-  password:{
-    width: '90%',
-  },
   nextBtn: {
     marginTop:20,
   }

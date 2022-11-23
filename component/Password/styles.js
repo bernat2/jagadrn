@@ -36,9 +36,6 @@ const styles = StyleSheet.create({
   },
   password:{
     width: '90%',
-  },
-  nextBtn: {
-    marginTop:20,
   }
 });
 
