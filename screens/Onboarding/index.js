@@ -101,7 +101,7 @@ const Onboarding = ({navigation}) => {
               CREATE NEW WALLET
             </Text>
           </TouchableOpacity>
-          <TouchableOpacity style={globalStyle.secondaryButton}>
+          <TouchableOpacity style={globalStyle.secondaryButton} onPress={() => navigation.navigate('SECURITY ACCESS')}>
             <Text style={[globalStyle.fontBlack, globalStyle.fontWeight600]}>
               I ALREADY HAVE A WALLET
             </Text>

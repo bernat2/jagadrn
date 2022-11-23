@@ -5,16 +5,13 @@ import {
   View,
   Image,
   TouchableOpacity,
-  Dimensions,
-  FontAwesomeIcon,
-  Pressable,
-  TextInput,
 } from 'react-native';
 // styles only use in this file only
 import styles from './style';
 // styles used can be called and reuse by other file
 import globalStyle from '../../styles/index';
 import CreateChangePassword from '../../component/Password/CreateChangePassword';
+import Header from '../../component/Header';
 
 const NewWallet = ({navigation}) => {
   const [password, setPassword] = useState('');
@@ -30,17 +27,7 @@ const NewWallet = ({navigation}) => {
     <SafeAreaView>
       {/* Header */}
       <View style={globalStyle.container}>
-        <View style={globalStyle.header}>
-          <TouchableOpacity
-            onPress={() => navigation.goBack()}
-            style={globalStyle.backBoder}>
-            <Image
-              source={require('../../images/icons/chevron_back.png')}
-              style={globalStyle.backButton}
-            />
-          </TouchableOpacity>
-          <Text style={globalStyle.headerTitle}>CREATE NEW PASSWORD</Text>
-        </View>
+        <Header navigation={navigation} title={"CREATE NEW PASSWORD"}/>
 
         {/* Progress Bar */}
         <View style={styles.progresBar}>

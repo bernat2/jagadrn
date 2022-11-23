@@ -25,27 +25,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     borderRadius: 8,
   },
-  backButton: {
-    width: 30,
-    height: 30,
-    borderWidth: 1,
-    borderRadius: 50,
-    borderColor: "#f2f2f2",
-  },
   container: {
-    padding: 20,
-  },
-  header: {
-    flexDirection: "row",
-    alignItems: "center",
-  }, 
-  headerTitle: {
-    fontSize: 15,
-    paddingLeft: 50,
-    letterSpacing: 1.3
+    padding: 20
   },
   separator: {
-    marginVertical: 8,
+    marginBottom: 8,
     borderBottomColor: '#737373',
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
@@ -60,6 +44,9 @@ const styles = StyleSheet.create({
   },
   fontGray: {
     color: "#797D85"
+  },
+  fontDarkGray: {
+    color: "#7d7778"
   },
   fontRed: {
     color: "red"
