@@ -51,6 +51,12 @@ const styles = StyleSheet.create({
   fontRed: {
     color: "red"
   },
+  fontWeightBold:{
+    fontWeight: "bold"
+  },
+  fontWeight700: {
+    fontWeight: "700"
+  },
   fontWeight600: {
     fontWeight: "600"
   },

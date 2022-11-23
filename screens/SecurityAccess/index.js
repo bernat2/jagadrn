@@ -41,7 +41,7 @@ const SecurityAccess = ({navigation}) => {
               <TouchableOpacity style={styles.borderGray}>
                 <Text style={globalStyle.fontWeight600}>Change My PIN</Text>
               </TouchableOpacity>
-              <TouchableOpacity style={styles.borderGray}>
+              <TouchableOpacity style={styles.borderGray} onPress={() => navigation.navigate("CHANGE PASSWORD")}>
                 <Text style={globalStyle.fontWeight600}>Change My Password</Text>
               </TouchableOpacity>
             </View>

@@ -22,10 +22,11 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Onboarding from './screens/Onboarding/index';
 import NewWallet from './screens/NewWallet';
 import SecurityAccess from './screens/SecurityAccess';
+import ChangePassword from './screens/ChangePassword';
 
-const Stack = createNativeStackNavigator();
 
 const App = () => {
+  const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -40,8 +41,12 @@ const App = () => {
         <Stack.Screen name="Onboarding" component={Onboarding}/>
         <Stack.Screen name="CREATE NEW WALLET" component={NewWallet}/>
         <Stack.Screen name="SECURITY ACCESS" component={SecurityAccess}/>
+        <Stack.Screen name="CHANGE PASSWORD" component={ChangePassword}/>
       </Stack.Navigator>
     </NavigationContainer>
+    // <View>
+    //   <Text>Hello</Text>
+    // </View>
   );
 };
 

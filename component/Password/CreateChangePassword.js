@@ -38,11 +38,11 @@ const CreateChangePassword = props => {
       );
     }
     if (verifyPassword != '') {
-      if (password != verifyPassword) {
+      if (password != verifyPassword || password.length<6 || verifyPassword.length<6) {
         setVerifyPasswordErrorMessage('Your password do not match');
         setIsPasswordMatch(false);
       }
-      if (password == verifyPassword) {
+      else if (password == verifyPassword) {
         setVerifyPasswordErrorMessage('');
         setIsPasswordMatch(true);
       }

@@ -24,7 +24,7 @@ module.exports = (async () => {
     },
     resolver: {
       assetExts: assetExts.filter((ext) => ext !== 'svg'),
-      sourceExts: ['jsx', 'js', 'ts', 'tsx', 'cjs', 'svg'],
+      sourceExts: ['json','jsx', 'js', 'ts', 'tsx', 'cjs', 'svg'],
       // extraNodeModules: require('node-libs-react-native')
     }
   };
