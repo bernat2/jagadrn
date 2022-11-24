@@ -10,6 +10,9 @@ const styles = StyleSheet.create({
   editText:{
     marginBottom: 10
   },
+  content:{
+    flex: 25
+  },
   borderGray: {
     borderWidth: 2,
     borderColor: "#f2f2f2",
@@ -17,6 +20,9 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     borderRadius: 10,
     marginTop: 5,
+  },
+  redInformation:{
+    flex: 4,
   },
   redInfo:{
     backgroundColor: "#fce4e5",

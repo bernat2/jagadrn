@@ -5,6 +5,12 @@ const styles = StyleSheet.create({
     flex: 25,
     backgroundColor: '#fbfdff',
   },
+  spaces: {
+    flex: 0.5,
+  },
+  gradient: {
+    flex: 8,
+  },
   gradientCard: {
     paddingHorizontal: 20,
     paddingVertical: 25,

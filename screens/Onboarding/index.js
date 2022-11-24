@@ -39,6 +39,7 @@ const Onboarding = ({navigation}) => {
     },
   ];
 
+  // +20 width because of padding.
   const windowWidth = Dimensions.get('window').width + 20;
   const windowHeight = Dimensions.get('window').height;
 
@@ -92,10 +93,11 @@ const Onboarding = ({navigation}) => {
           inactiveDotOpacity={1}
           inactiveDotScale={1}
           animatedDuration={0}
+          style={globalStyle.flex1}
         />
 
         {/* Button */}
-        <View>
+        <View >
           <TouchableOpacity style={globalStyle.primaryButton} onPress={() => navigation.navigate('CREATE NEW WALLET')}>
             <Text style={[globalStyle.fontWhite, globalStyle.fontWeight600]}>
               CREATE NEW WALLET

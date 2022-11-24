@@ -11,6 +11,7 @@ import {
 import styles from './styles';
 // styles used can be called and reuse by other file
 import globalStyle from '../../styles/index';
+import InputPassword from '../InputPassword/InputPassword';
 
 const CreateChangePassword = props => {
   const {
@@ -38,11 +39,15 @@ const CreateChangePassword = props => {
       );
     }
     if (verifyPassword != '') {
-      if (password != verifyPassword || password.length<6 || verifyPassword.length<6 || !regex.test(password)) {
+      if (
+        password != verifyPassword ||
+        password.length < 6 ||
+        verifyPassword.length < 6 ||
+        !regex.test(password)
+      ) {
         setVerifyPasswordErrorMessage('Your password do not match');
         setIsPasswordMatch(false);
-      }
-      else if (password == verifyPassword) {
+      } else if (password == verifyPassword) {
         setVerifyPasswordErrorMessage('');
         setIsPasswordMatch(true);
       }
@@ -80,25 +85,15 @@ const CreateChangePassword = props => {
   return (
     <View>
       {/* Form */}
-      <View style={{marginBottom: 20}}>
+      <View style={styles.spaces}>
         <Text style={globalStyle.fontWeight500}>Create Password</Text>
         <View style={styles.inputForm}>
-          <TextInput
-            style={styles.password}
-            placeholder="Your Password"
-            secureTextEntry={passwordVisibility}
-            value={password}
-            onChangeText={setPassword}
-            autoCapitalize="none"
+          <InputPassword
+            password={password}
+            setPassword={setPassword}
+            placeholderText={'Your password'}
+            style={styles.inputForm}
           />
-          <TouchableOpacity onPress={togglePasswordVisibility}>
-            {/* <MaterialCommunityIcons
-                name={rightIcon}
-                size={22}
-                color="#232323"
-              /> */}
-            <Text>View</Text>
-          </TouchableOpacity>
         </View>
         {passwordErrorMessage.length > 0 && (
           <Text style={globalStyle.fontGray}>{passwordErrorMessage}</Text>
@@ -109,22 +104,14 @@ const CreateChangePassword = props => {
         <Text style={globalStyle.fontWeight500}>Verify Password</Text>
         <View
           style={isPasswordMatch ? styles.inputForm : styles.passwordWrongForm}>
-          <TextInput
-            style={styles.password}
-            placeholder="Your Password"
-            secureTextEntry={verifyPasswordVisibility}
-            value={verifyPassword}
-            onChangeText={setVerifyPassword}
-            autoCapitalize="none"
+          <InputPassword
+            password={verifyPassword}
+            setPassword={setVerifyPassword}
+            placeholderText={'Verify your password'}
+            style={
+              isPasswordMatch ? styles.inputForm : styles.passwordWrongForm
+            }
           />
-          <TouchableOpacity onPress={toggleVerifyPasswordVisibility}>
-            {/* <MaterialCommunityIcons
-                name={rightIcon}
-                size={22}
-                color="#232323"
-              /> */}
-            <Text>View</Text>
-          </TouchableOpacity>
         </View>
         {verifyPasswordErrorMessage.length > 0 && (
           <View>

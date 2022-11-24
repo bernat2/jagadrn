@@ -14,6 +14,7 @@ import styles from './style';
 import globalStyle from '../../styles/index';
 import Header from '../../component/Header';
 import CreateChangePassword from '../../component/Password/CreateChangePassword';
+import InputPassword from '../../component/InputPassword/InputPassword';
 
 const ChangePassword = ({navigation}) => {
   const [oldPassword, setOldPassword] = useState('');
@@ -52,7 +53,7 @@ const ChangePassword = ({navigation}) => {
         </View>
 
         {/* flex 25*/}
-        <View style={{flex: 25, backgroundColor: '#fbfdff'}}>
+        <View style={styles.content}>
           <View style={globalStyle.separator}></View>
           <View style={globalStyle.container}>
             <View style={styles.pageInfo}>
@@ -66,22 +67,7 @@ const ChangePassword = ({navigation}) => {
             <View style={styles.inputBox}>
               <Text>Enter Old Password</Text>
               <View style={styles.inputForm}>
-                <TextInput
-                  style={styles.password}
-                  placeholder="Enter Old Password"
-                  secureTextEntry={oldPasswordVisibility}
-                  value={oldPassword}
-                  onChangeText={setOldPassword}
-                  autoCapitalize="none"
-                />
-                <TouchableOpacity onPress={toggleOldPasswordVisibility}>
-                  {/* <MaterialCommunityIcons
-                name={rightIcon}
-                size={22}
-                color="#232323"
-                /> */}
-                  <Text>View</Text>
-                </TouchableOpacity>
+                <InputPassword password={oldPassword} setPassword={setOldPassword} placeholderText={"Enter Old Password"}/>
               </View>
 
               <CreateChangePassword

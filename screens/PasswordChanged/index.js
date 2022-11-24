@@ -24,7 +24,6 @@ const PasswordChanged = ({navigation}) => {
     <SafeAreaView>
       {/* Header */}
       <View style={{height: windowHeight}}>
-        {/* flex 1 */}
         <View style={globalStyle.container}>
           <Header navigation={navigation} title={'CHANGE PASSWORD'} />
         </View>
@@ -32,11 +31,11 @@ const PasswordChanged = ({navigation}) => {
         {/* flex 25*/}
         <View style={styles.bodyColor}>
           <View style={globalStyle.separator}></View>
-          <View style={[globalStyle.container, {flex: 1}]}>
+          <View style={[globalStyle.container, globalStyle.flex1]}>
             {/* Flex 0.5 to get a space after the separator */}
-            <View style={{flex: 0.5}}></View>
+            <View style={styles.spaces}></View>
 
-            <View style={{flex: 8}}>
+            <View style={styles.gradient}>
               <LinearGradient
               // Colors for the gradient
                 colors={['#f1fbff', '#eeecff']}

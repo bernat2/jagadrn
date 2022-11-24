@@ -28,12 +28,12 @@ const SecurityAccess = ({navigation}) => {
         </View>
 
         {/* flex 25*/}
-        <View style={{flex: 25}}>
+        <View style={styles.content}>
           <View style={globalStyle.separator}></View>
 
           {/* add flex 1, to use flex inside this container.
           Need to refactor all the style since container need flex: 1 */}
-          <View style={[globalStyle.container, {flex: 1}]}>
+          <View style={[globalStyle.container, globalStyle.flex1]}>
 
             {/*  flex 15 */}
             <View style={styles.information}>
@@ -47,7 +47,7 @@ const SecurityAccess = ({navigation}) => {
             </View>
 
             {/* flex 4 */}
-            <View style={{flex: 4}}>
+            <View style={styles.redInformation}>
               <View style={styles.redInfo}>
                 <Text style={[styles.infoText, globalStyle.fontDarkGray]}>
                   Please be sure to keep your information to yourself only

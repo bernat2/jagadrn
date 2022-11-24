@@ -1,18 +1,22 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  pageInfo:{
-    width: "65%",
-    alignSelf: "center",
-    margin:  30
+  content: {
+    flex: 25,
+    backgroundColor: '#fbfdff',
   },
-  pageTitle:{
+  pageInfo: {
+    width: '65%',
+    alignSelf: 'center',
+    margin: 30,
+  },
+  pageTitle: {
     fontSize: 26,
-    textAlign: "center",
-    marginBottom: 5
+    textAlign: 'center',
+    marginBottom: 5,
   },
-  pageDesc:{
-    textAlign:"center",
+  pageDesc: {
+    textAlign: 'center',
     letterSpacing: 1.1,
   },
   inputBox: {
@@ -21,7 +25,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     padding: 10,
     borderBottomWidth: 5,
-    elevation: 5
+    elevation: 5,
   },
   inputForm: {
     borderWidth: 2,
