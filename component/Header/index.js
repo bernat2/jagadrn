@@ -1,5 +1,6 @@
 import React from 'react';
 import {SafeAreaView, Text, View, Image, TouchableOpacity} from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 // styles only use in this file only
 import styles from './styles';
 // styles used can be called and reuse by other file

@@ -3,7 +3,7 @@ import {View, Text, Image} from 'react-native';
 import styles from './styles';
 import globalStyle from '../../styles/index'
 
-function CarouselItem({item, index}) {
+function CarouselItem({item}) {
   return (
     // Create only 1 view to all elements
     <View>

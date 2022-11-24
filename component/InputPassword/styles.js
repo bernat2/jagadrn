@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     marginVertical: 12,
   },
   password: {
-    width: '90%',
+    width: '93%',
   },
 });
 

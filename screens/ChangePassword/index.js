@@ -3,11 +3,10 @@ import {
   SafeAreaView,
   Text,
   View,
-  Image,
   TouchableOpacity,
   Dimensions,
-  TextInput,
 } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 // styles only use in this file only
 import styles from './style';
 // styles used can be called and reuse by other file
@@ -67,7 +66,11 @@ const ChangePassword = ({navigation}) => {
             <View style={styles.inputBox}>
               <Text>Enter Old Password</Text>
               <View style={styles.inputForm}>
-                <InputPassword password={oldPassword} setPassword={setOldPassword} placeholderText={"Enter Old Password"}/>
+                <InputPassword
+                  password={oldPassword}
+                  setPassword={setOldPassword}
+                  placeholderText={'Enter Old Password'}
+                />
               </View>
 
               <CreateChangePassword
@@ -90,25 +93,38 @@ const ChangePassword = ({navigation}) => {
                   isPasswordMatch && verifyPassword && oldPassword != ''
                     ? [
                         globalStyle.primaryButton,
+                        globalStyle.directionRow,
                         styles.nextBtn,
                         styles.changeButton,
                       ]
                     : [
                         globalStyle.disabledButton,
+                        globalStyle.directionRow,
                         styles.nextBtn,
                         styles.changeButton,
                       ]
                 }
-                disabled={!(isPasswordMatch && verifyPassword && oldPassword != '')}
+                disabled={
+                  !(isPasswordMatch && verifyPassword && oldPassword != '')
+                }
                 onPress={() => navigation.navigate('PASSWORD CHANGED')}>
                 <Text
                   style={
                     isPasswordMatch && verifyPassword && oldPassword != ''
-                      ? [globalStyle.fontWhite]
-                      : [globalStyle.fontDisabled]
+                      ? [globalStyle.fontWhite, styles.nextText]
+                      : [globalStyle.fontDisabled, styles.nextText]
                   }>
                   Change
                 </Text>
+                <Icon
+                  name='key-outline'
+                  size={18}
+                  color={
+                    isPasswordMatch && verifyPassword && oldPassword != ''
+                      ? 'white'
+                      : '#afb5c0'
+                  }
+                />
               </TouchableOpacity>
             </View>
           </View>

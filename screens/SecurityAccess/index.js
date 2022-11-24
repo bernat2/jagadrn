@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   SafeAreaView,
   Text,
   View,
-  Image,
   TouchableOpacity,
   Dimensions,
 } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 // styles only use in this file only
 import styles from './style';
 // styles used can be called and reuse by other file
@@ -38,11 +38,13 @@ const SecurityAccess = ({navigation}) => {
             {/*  flex 15 */}
             <View style={styles.information}>
               <Text style={[globalStyle.fontGray, styles.editText, globalStyle.fontWeight500]}>Edit Your Information</Text>
-              <TouchableOpacity style={styles.borderGray}>
-                <Text style={globalStyle.fontWeight600}>Change My PIN</Text>
+              <TouchableOpacity style={[styles.borderGray, globalStyle.directionRow]}>
+                <Text style={[globalStyle.fontWeight600, styles.choiceText]}>Change My PIN</Text>
+                <Icon name={'create'} size={18} color={"#0728e7"} style={styles.iconBorder}/>
               </TouchableOpacity>
-              <TouchableOpacity style={styles.borderGray} onPress={() => navigation.navigate("CHANGE PASSWORD")}>
-                <Text style={globalStyle.fontWeight600}>Change My Password</Text>
+              <TouchableOpacity style={[styles.borderGray, globalStyle.directionRow]} onPress={() => navigation.navigate("CHANGE PASSWORD")}>
+                <Text style={[globalStyle.fontWeight600, styles.choiceText]}>Change My Password</Text>
+                <Icon name={'create'} size={18} color={"#0728e7"} style={styles.iconBorder}/>
               </TouchableOpacity>
             </View>
 

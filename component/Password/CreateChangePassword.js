@@ -1,11 +1,7 @@
 import React, {useState} from 'react';
 import {
-  SafeAreaView,
   Text,
   View,
-  Image,
-  TouchableOpacity,
-  TextInput,
 } from 'react-native';
 // styles only use in this file only
 import styles from './styles';

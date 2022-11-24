@@ -44,6 +44,9 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-end',
     marginTop: 20,
   },
+  nextText: {
+    marginRight: 5
+  },
 });
 
 export default styles;

@@ -3,7 +3,6 @@ import {
   SafeAreaView,
   Text,
   View,
-  Image,
   TouchableOpacity,
 } from 'react-native';
 // styles only use in this file only
