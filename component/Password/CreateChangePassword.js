@@ -38,7 +38,7 @@ const CreateChangePassword = props => {
       );
     }
     if (verifyPassword != '') {
-      if (password != verifyPassword || password.length<6 || verifyPassword.length<6) {
+      if (password != verifyPassword || password.length<6 || verifyPassword.length<6 || !regex.test(password)) {
         setVerifyPasswordErrorMessage('Your password do not match');
         setIsPasswordMatch(false);
       }

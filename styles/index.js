@@ -46,10 +46,13 @@ const styles = StyleSheet.create({
     color: "#797D85"
   },
   fontDarkGray: {
-    color: "#7d7778"
+    color: "#6e707b"
   },
   fontRed: {
     color: "red"
+  },
+  fontPurple:{
+    color: "#550472"
   },
   fontWeightBold:{
     fontWeight: "bold"

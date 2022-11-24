@@ -51,14 +51,17 @@ const ChangePassword = ({navigation}) => {
           <Header navigation={navigation} title={'CHANGE PASSWORD'} />
         </View>
 
-
         {/* flex 25*/}
-        <View style={{flex: 25, backgroundColor: "#fbfdff"}}>
-        <View style={globalStyle.separator}></View>
+        <View style={{flex: 25, backgroundColor: '#fbfdff'}}>
+          <View style={globalStyle.separator}></View>
           <View style={globalStyle.container}>
             <View style={styles.pageInfo}>
-              <Text style={[styles.pageTitle, globalStyle.fontWeightBold]}>Enter Password</Text>
-              <Text style={styles.pageDesc}>Fill your new password on the field bellow</Text>
+              <Text style={[styles.pageTitle, globalStyle.fontWeightBold]}>
+                Enter Password
+              </Text>
+              <Text style={styles.pageDesc}>
+                Fill your new password on the field bellow
+              </Text>
             </View>
             <View style={styles.inputBox}>
               <Text>Enter Old Password</Text>
@@ -93,16 +96,28 @@ const ChangePassword = ({navigation}) => {
                 isPasswordMatch={isPasswordMatch}
                 setIsPasswordMatch={setIsPasswordMatch}
               />
+
+              {/* onPress can used to call a function to save the data and after the data saved
+              it will navigate to other page */}
               <TouchableOpacity
                 style={
-                  isPasswordMatch && verifyPassword != ''
-                    ? [globalStyle.primaryButton, styles.nextBtn, styles.changeButton]
-                    : [globalStyle.disabledButton, styles.nextBtn, styles.changeButton]
+                  isPasswordMatch && verifyPassword && oldPassword != ''
+                    ? [
+                        globalStyle.primaryButton,
+                        styles.nextBtn,
+                        styles.changeButton,
+                      ]
+                    : [
+                        globalStyle.disabledButton,
+                        styles.nextBtn,
+                        styles.changeButton,
+                      ]
                 }
-                disabled={!(isPasswordMatch && verifyPassword != '')}>
+                disabled={!(isPasswordMatch && verifyPassword && oldPassword != '')}
+                onPress={() => navigation.navigate('PASSWORD CHANGED')}>
                 <Text
                   style={
-                    isPasswordMatch && verifyPassword != ''
+                    isPasswordMatch && verifyPassword && oldPassword != ''
                       ? [globalStyle.fontWhite]
                       : [globalStyle.fontDisabled]
                   }>

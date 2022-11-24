@@ -23,6 +23,7 @@ import Onboarding from './screens/Onboarding/index';
 import NewWallet from './screens/NewWallet';
 import SecurityAccess from './screens/SecurityAccess';
 import ChangePassword from './screens/ChangePassword';
+import PasswordChanged from './screens/PasswordChanged';
 
 
 const App = () => {
@@ -42,6 +43,7 @@ const App = () => {
         <Stack.Screen name="CREATE NEW WALLET" component={NewWallet}/>
         <Stack.Screen name="SECURITY ACCESS" component={SecurityAccess}/>
         <Stack.Screen name="CHANGE PASSWORD" component={ChangePassword}/>
+        <Stack.Screen name="PASSWORD CHANGED" component={PasswordChanged}/>
       </Stack.Navigator>
     </NavigationContainer>
     // <View>
