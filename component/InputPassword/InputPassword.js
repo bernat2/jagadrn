@@ -10,6 +10,8 @@ import styles from './styles';
 import globalStyle from '../../styles/index';
 // import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Icon from 'react-native-vector-icons/Ionicons';
+Icon.loadFont().catch(function (error){
+});
 
 const InputPassword = props => {
   const {password, setPassword, placeholderText} = props;

@@ -7,6 +7,9 @@ import {
   Dimensions,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+Icon.loadFont().catch(function (error){
+  
+});
 // styles only use in this file only
 import styles from './style';
 // styles used can be called and reuse by other file
@@ -40,11 +43,11 @@ const SecurityAccess = ({navigation}) => {
               <Text style={[globalStyle.fontGray, styles.editText, globalStyle.fontWeight500]}>Edit Your Information</Text>
               <TouchableOpacity style={[styles.borderGray, globalStyle.directionRow]}>
                 <Text style={[globalStyle.fontWeight600, styles.choiceText]}>Change My PIN</Text>
-                <Icon name={'create'} size={18} color={"#0728e7"} style={styles.iconBorder}/>
+                <Icon name={'md-create'} size={18} color={"#0728e7"} style={styles.iconBorder}/>
               </TouchableOpacity>
               <TouchableOpacity style={[styles.borderGray, globalStyle.directionRow]} onPress={() => navigation.navigate("CHANGE PASSWORD")}>
                 <Text style={[globalStyle.fontWeight600, styles.choiceText]}>Change My Password</Text>
-                <Icon name={'create'} size={18} color={"#0728e7"} style={styles.iconBorder}/>
+                <Icon name={'md-create'} size={18} color={"#0728e7"} style={styles.iconBorder}/>
               </TouchableOpacity>
             </View>
 

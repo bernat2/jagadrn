@@ -7,6 +7,9 @@ import {
   Dimensions,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+Icon.loadFont().catch(function (error){
+  
+});
 // styles only use in this file only
 import styles from './style';
 // styles used can be called and reuse by other file
